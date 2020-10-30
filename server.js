@@ -10,15 +10,9 @@ const app = express();
 // Express middleware
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+
+// Use api Routes
 app.use('/api', apiRoutes);
-
-
-
-
-
-  
-
- 
 
 // Default response for any other request(Not Found) Catch all
 app.use((req, res) => {
